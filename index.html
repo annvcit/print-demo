@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="container">
+            <div class="row"><button onclick="printDiv2()">print content 2</button></div>
+            <div class="row">
+                <div class="col-sm-4" id="div1">
+                    <h1>content 1</h1>
+                </div>
+                <div class="col-sm-4" id="div2">
+                    <h1>content 2</h1>
+                </div>
+                <div class="col-sm-4" id="div3">
+                    <h1>content 3</h1>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            .row > div[id^=div] {
+                height: 300px;
+                width: 300px;
+            }
+            .col-sm-4 {
+                float: left;
+            }
+            #div1 {
+                background-color: azure;
+            }
+            #div2 {
+                background-color:blanchedalmond
+            }
+            #div3 {
+                background-color: chocolate;
+            }
+        </style>
+
+        <script src="lib/jquery.min.js"></script>
+        <script src="lib/jQuery.print.js"></script>
+        <script>
+            function printDiv2() {
+                $('#div2').print({
+                    timeout: 0
+                });
+            }
+        </script>
+    </body>
+    </body>
+</html>
